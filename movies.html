@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kaiju Movies</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div class="search-container">
+    <input type="text" placeholder="Search..." class="search-bar">
+  </div>
+  <div class="movies-container">
+    <div name="Godzilla vs Kong" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-vs-kong-68933')"
+        src="https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg">
+    </div>
+    <div name="Godzilla King of the Monsters" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-king-of-the-monsters-7843')"
+        src="https://m.media-amazon.com/images/M/MV5BOGFjYWNkMTMtMTg1ZC00Y2I4LTg0ZTYtN2ZlMzI4MGQwNzg4XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg">
+    </div>
+    <div name="Godzilla 2014" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-18975')" src="https://m.media-amazon.com/images/M/MV5BZDFmYTM4NzAtNWM0ZC00MGJlLWEyYzQtYzA3ZTFiNzc1YjllXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg">
+    </div>
+    <div name="Kong: Skull Island" class="movie">
+      <img onclick="showIframe(event,'watch-kong-skull-island-19415')" src="https://m.media-amazon.com/images/M/MV5BZTQ4OWQyZTItMjE4Mi00ODQ5LTllZWItN2RkNzg3Mzc3NzA5XkEyXkFqcGdeQXVyNTc3MjUzNTI@._V1_.jpg">
+    </div>
+    <div class="movie">
+      <img onclick="showIframe(event,'watch-shin-godzilla-16625')" src="https://www.themoviedb.org/t/p/original/wEe5XmBGY5Ncze64VZ5XbsoHFFB.jpg">
+    </div>
+    <div name="Godzilla: Final Wars"class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-final-wars-5298')" src="https://www.themoviedb.org/t/p/w1280/21lWA4YyYppVnwAPOiBkGrt2FGr.jpg">
+    </div>
+    <div name="Godzilla: Tokyo S.O.S." class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-tokyo-sos-10942')" src="https://www.themoviedb.org/t/p/w1280/iwRJNFY9yvtPdu0DsTXOJ8sAap3.jpg">
+    </div>
+    <div name="Godzilla Against MechaGodzilla"  class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-against-mechagodzilla-6312')" src="https://www.themoviedb.org/t/p/w1280/nSft7gT42Y7f0gZtZ74nMyuyMvw.jpg">
+    </div>
+    <div name="Godzilla 1998" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-18022')" src="https://www.themoviedb.org/t/p/w1280/tqQ9Nt5C1Z5PRDPxYXQ4qwy5v5V.jpg">
+    </div>
+    <div name="Godzilla vs. Destoroyah" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-vs-destoroyah-15712')" src="https://www.themoviedb.org/t/p/w1280/csebMf1IWokaWOughl5s3uX8p44.jpg">
+    </div>
+    <div name="Godzilla vs. SpaceGodzilla" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-vs-spacegodzilla-4141')" src="https://www.themoviedb.org/t/p/w1280/4OjDyucLeuttyUEYhwsIf1ylPO4.jpg">
+    </div>
+    <div name="Godzilla vs. Megalon" class="movie">
+      <img onclick="showIframe(event,'watch-godzilla-vs-megalon-65862')" src="https://www.themoviedb.org/t/p/w1280/x0QgTLyCWVFsSIjSHWRB0UjNOit.jpg">
+    </div>
+    <div name="Son of Godzilla" class="movie">
+      <img onclick="showIframe(event,'watch-son-of-godzilla-67252')" src="https://www.themoviedb.org/t/p/w1280/ueVb71Om2KaDcbeSLA8IHQtJ7oJ.jpg">
+    </div>
+    <div name="Gamera 3: Revenge of Iris" class="movie">
+      <img onclick="showIframe(event,'watch-gamera-3-revenge-of-iris-64315')" src="https://www.themoviedb.org/t/p/w1280/yeUzjv04YdWS3Er5m1gPJJS1D10.jpg">
+    </div>
+  </div>
+
+  <div id="iframe-container">
+    <iframe id="iframe-content"></iframe>
+    <button onclick="hideIframe()">X</button>
+  </div>
+
+  <script>
+    function showIframe(event, src) {
+      event.stopPropagation();
+      var overlay = document.getElementById('overlay');
+      var iframeContainer = document.getElementById('iframe-container');
+      var iframeContent = document.getElementById('iframe-content');
+      // any bloovies url can be used for this
+      iframeContent.src = 'https://bloovies.vercel.app?movie=' + src;
+
+      iframeContainer.style.display = 'block';
+    }
+
+    function hideIframe() {
+      var overlay = document.getElementById('overlay');
+      var iframeContainer = document.getElementById('iframe-container');
+      var iframeContent = document.getElementById('iframe-content');
+
+      iframeContent.src = '';
+      iframeContainer.style.display = 'none'
+    }
+  </script>
+  <script>
+    const searchBar = document.querySelector('.search-bar');
+    const moviesContainer = document.querySelector('.movies-container');
+    const movies = document.querySelectorAll('.movie');
+
+    searchBar.addEventListener('input', (e) => {
+      const searchValue = e.target.value.toLowerCase();
+      let visibleMovies = 0;
+      movies.forEach((movie) => {
+        const movieName = movie.getAttribute('name');
+        if (!searchValue || (movieName && movieName.toLowerCase().includes(searchValue))) {
+          movie.classList.remove('hidden');
+          visibleMovies++;
+        } else {
+          movie.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
