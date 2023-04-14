@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #1c1c1c;
+      color: #eee;
+      height: 100vh;
+      margin: 0;
+      padding-top: 3rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      width: 485px;
+      padding: 0.5rem;
+      background-color: #333;
+      border: 1px solid #555;
+      border-radius: 4px;
+      color: #eee;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+      width: 500px;
+      padding: 0.5rem;
+      background-color: #3f3f3f;
+      border: none;
+      border-radius: 4px;
+      color: #eee;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    button:hover {
+      background-color: #4f4f4f;
+    }
+
+    .sidebar {
+      border: none;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #222222;
+      border-radius: 0 10px 10px 0;
+      transition: all 0.3s ease-in-out;
+      z-index: 1;
+    }
+
+    .sidebar-button {
+      border: none;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 40px;
+      height: 40px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 2;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar-button:hover {
+      background-color: #000;
+    }
+
+    .sidebar-button i {
+      transition: all 0.3s ease-in-out;
+      color: #000000;
+    }
+
+
+    .sidebar-button:hover i {
+      color: #fff;
+    }
+
+
+    .sidebar-button.active {
+      left: 270px;
+    }
+
+    .sidebar-content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .sidebar-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    .sidebar-button-secondary {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .sidebar-button-third {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .sidebar-button-third:hover {
+      background: darkred;
+    }
+
+    .sidebar-button-secondary:hover {
+      background-color: #383838;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .fa {
+      margin-right: 10px;
+    }
+
+    img {
+      border-radius: 15px;
+      width: 125px;
+      height: 125px;
+    }
+  </style>
+  <title>SpaceFlix | Settings</title>
+</head>
+
+<body>
+  <button class="sidebar-button" id="sidebar-button"><i class="fas fa-bars"></i></button>
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <h1 class="sidebar-title">SpaceFlix</h1>
+      <div id="image"></div>
+      <p id="textForUsername"></p>
+      <a href="movies.html" class="sidebar-button-secondary"><i class="fas fa-film"></i> ㅤMovies</a>
+      <a href="#" class="sidebar-button-secondary"><i class="fas fa-tv"></i> ㅤTV Shows</a>
+      <a href="settings.html" class="sidebar-button-secondary"><i class="fas fa-cog"></i>ㅤSettings</a>
+      <br>
+      <a class="sidebar-button-third" href="#" onclick="signOut()"><i class="fas fa-sign-out-alt"></i>
+        Sign out</a>
+    </div>
+  </div>
+  <div class="container">
+    <h1>SpaceFlix Settings</h1>
+    <form id="settingsForm">
+      <div class="input-group">
+        <label for="blooviesURL">Bloovies URL:</label>
+        <input type="text" id="blooviesURL" name="blooviesURL" placeholder="Enter Bloovies URL">
+      </div>
+      <button type="submit">Save</button>
+      <button type="button" id="resetBtn">Reset to Default</button>
+    </form>
+    <hr>
+    <br>
+    <div class="container">
+      <label for="title">SpaceFlix's Tab Title:</label>
+      <input id="title" placeholder="Input SpaceFlix's Title Here">
+      <button onclick="changeTitle()">Set SpaceFlix's Title</button>
+      <button onclick="localStorage.title = '', document.title='SpaceFlix | Settings'">Reset SpaceFlix's Title to
+        default</button>
+      <hr>
+
+    </div>
+  </div>
+  <div class="container">
+    <center>
+  
+    </center>
+  </div>
+ 
+  <script>
+    var section = document.getElementById("sectionForProfiles");
+    document.getElementById('img').src = localStorage.getItem("imgURL")
+    var name = document.createElement('p');
+    name.textContent = localStorage.getItem("username");
+    document.getElementById("sectionForProfiles").appendChild(img);
+    function saveBlooviesURL(url) {
+      return localStorage.setItem("blooviesURL", url);
+    }
+
+    function changeTitle() {
+      localStorage.setItem("title", (document.title = document.getElementById('title').value));
+      localStorage.getItem("title")
+      if (localStorage.title) localStorage.getItem("title");
+    }
+
+    document.title = localStorage.getItem("title");
+    document.getElementById("settingsForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const blooviesURL = document.getElementById("blooviesURL").value;
+
+      if (!blooviesURL.endsWith("?movie=")) {
+        saveBlooviesURL(blooviesURL + "?movie=");
+      } else {
+        saveBlooviesURL(blooviesURL);
+      }
+
+      console.log("Bloovies URL:", blooviesURL);
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", function () {
+      const defaultURL = "https://bloovies.vercel.app?movie=";
+      document.getElementById("blooviesURL").value = defaultURL;
+      saveBlooviesURL(defaultURL);
+    });
+
+    window.addEventListener("load", () => localStorage.getItem("imgURL"));
+  </script>
+  <script src="sidebar.js"></script>
+</body>
+
+</html>

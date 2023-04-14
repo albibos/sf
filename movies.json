@@ -1,0 +1,286 @@
+{
+  "movies": [
+    {
+      "movie": "Godzilla vs. Kong",
+      "Rating": "PG-13",
+      "Length": "1h 53m",
+      "Genre": "Sci-Fi, Action"
+    },
+    {
+      "movie": "Super Mario Bros",
+      "Rating": "PG",
+      "Length": "1h 32m",
+      "Genre": "Adventure"
+    },
+    {
+      "movie": "Shazam!",
+      "Rating": "PG-13",
+      "Length": "2h 12m",
+      "Genre": "Action, Comedy"
+    },
+    {
+      "movie": "Unseen",
+      "Rating": "NR",
+      "Length": "1h 16m",
+      "Genre": "Horror, Mystery"
+    },
+    {
+      "movie": "Bee Movie",
+      "Rating": "PG",
+      "Length": "1h 31m",
+      "Genre": "Family, Comedy"
+    },
+    {
+      "movie": "Creed III",
+      "Rating": "PG-13",
+      "Length": "1h 56m",
+      "Genre": "Drama, Action"
+    },
+    {
+      "movie": "Broken Ties",
+      "Rating": "R",
+      "Length": "1h 28m",
+      "Genre": "Thriller"
+    },
+    {
+      "movie": "Portable Door",
+      "Rating": "PG",
+      "Length": "1h 56m",
+      "Genre": "Fantasy, Comedy"
+    },
+    {
+      "movie": "John Wick 4",
+      "Rating": "R",
+      "Length": "2h 50m",
+      "Genre": "Action, Thriller"
+    },
+    {
+      "movie": "Minions",
+      "Rating": "PG",
+      "Length": "1h 31m",
+      "Genre": "Family, Comedy"
+    },
+    {
+      "movie": "Despicable Me 2",
+      "Rating": "PG",
+      "Length": "1h 38m",
+      "Genre": "Family, Comedy"
+    },
+    {
+      "movie": "Despicable Me 3",
+      "Rating": "PG",
+      "Length": "1h 36m",
+      "Genre": "Family, Comedy"
+    },
+    {
+      "movie": "Megamind",
+      "Rating": "PG",
+      "Length": "1h 36m",
+      "Genre": "Family, Comedy"
+    },
+    {
+      "movie": "A Lot of Nothing",
+      "Rating": "NR",
+      "Length": "1h 34m",
+      "Genre": "Drama, Thriller"
+    },
+    {
+      "movie": "Southern Gospel",
+      "Rating": "PG-13",
+      "Length": "1h 49m",
+      "Genre": "History, Drama"
+    },
+    {
+      "movie": "Matrix Resurrection",
+      "Rating": "R",
+      "Length": "2h 27m",
+      "Genre": "Action"
+    },
+    {
+      "movie": "What's love got to ..",
+      "Rating": "12A",
+      "Length": "1h 49m",
+      "Genre": "Romance"
+    },
+    {
+      "movie": "Avatar",
+      "Rating": "PG-13",
+      "Length": "2h 42m",
+      "Genre": "Action, Fantasy"
+    },
+    {
+      "movie": "Matrix 2",
+      "Rating": "R",
+      "Length": "2h 9m",
+      "Genre": "Action, Thriller"
+    },
+    {
+      "movie": "The Matrix Reloaded",
+      "Rating": "R",
+      "Length": "2h 18m",
+      "Genre": "Action, Thriller"
+    },
+    {
+      "movie": "Ant-Man and the ..",
+      "Rating": "PG-13",
+      "Length": "2h 5m",
+      "Genre": "Adventure"
+    },
+    {
+      "movie": "Godzilla 2014",
+      "Rating": "PG-13",
+      "Length": "2h 3m",
+      "Genre": "Action, Drama, Science Fiction"
+    },
+    {
+      "movie": "Cocaine Bear",
+      "Rating": "R",
+      "Length": "1h 35m",
+      "Genre": "Action, Comedy, Crime, Thriller"
+    },
+    {
+      "movie": "Mummies",
+      "Rating": "PG",
+      "Length": "1h 28m",
+      "Genre": "Animation, Comedy, Family"
+    },
+    {
+      "movie": "Matrix",
+      "Rating": "PG 13",
+      "Length": "2h 16m",
+      "Genre": "Action, Adventure, Mild Humor"
+    },
+    {
+      "movie": "Shazam! Fury of the ..",
+      "Rating": "PG",
+      "Length": "2h 10m",
+      "Genre": "Fantasy, Comedy, Action"
+    },
+    {
+      "movie": "Unheard",
+      "Rating": "PG 13",
+      "Length": "2h 4m",
+      "Genre": "Horror, Mystery, Thriller, Drama"
+    },
+    {
+      "movie": "Rye Lane",
+      "Rating": "R",
+      "Length": "1h 22m",
+      "Genre": "Romance, Comedy"
+    },
+    {
+      "movie": "Kill Boksoon",
+      "Rating":"R",
+      "Length":"2h 17m",
+      "Genre": "Action, Thriller, Adventure"
+    },
+    {
+      "movie": "Prom Pact",
+      "Rating":"PG-13",
+      "Length":"1h 38m",
+      "Genre": "Romance, Comedy"
+    },
+    {
+      "movie": "Oh Belinda",
+      "Rating":"R",
+      "Length":"1h 37m",
+      "Genre": "Drama, Comedy"
+    },
+    {
+      "movie": "Kong: Skull Island",
+      "Rating":"PG-13",
+      "Length":"1h 58m",
+      "Genre": "Action, Adventure"
+    },
+    {
+      "movie": "Chupa",
+      "Rating":"PG",
+      "Length":"1h 35m",
+      "Genre": "Adventure, Fantasy"
+    },
+    {
+      "movie": "65",
+      "Rating":"PG-13",
+      "Length":"1h 33m",
+      "Genre": "Action, Adventure"
+    },
+    {
+      "movie": "Puss in Boots: The Last Wish",
+      "Rating":"PG",
+      "Length":"1h 43m",
+      "Genre": "Family, Fantasy"
+    },
+    {
+      "movie": "Murder Mystery",
+      "Rating":"PG-13",
+      "Length":"1h 37m",
+      "Genre": "Comedy, Mystery"
+    },
+    {
+      "movie": "Murder Mystery 2",
+      "Rating":"PG-13",
+      "Length":"1h 31m",
+      "Genre": "Comedy, Mystery"
+    },
+    {
+      "movie": "Godzilla: King of the..",
+      "Rating":"PG-13",
+      "Length":"2h 12m",
+      "Genre": "Science Fiction, Action"
+    },
+    {
+      "movie": "Avatar: The Way of Water",
+      "Rating":"PG-13",
+      "Length":"3h 12m",
+      "Genre": "Adventure"
+    },
+    {
+      "movie": "Demon Slayer",
+      "Rating":"PG-13",
+      "Length":"1h 45m",
+      "Genre": "Action, Fantasy"
+    },
+    {
+      "movie": "Dungeons and Dragons",
+      "Rating":"PG-13",
+      "Length":"2h 14m",
+      "Genre": "Adventure"
+    },
+    {
+      "movie": "A Good Person",
+      "Rating":"R",
+      "Length":"2h 9m",
+      "Genre": "Comedy, Drama"
+    },
+    {
+      "movie": "Tetris",
+      "Rating":"R",
+      "Length":"1h 58m",
+      "Genre": "Thriller, History, Drama"
+    },
+    {
+      "movie": "Operation Fortune",
+      "Rating":"R",
+      "Length":"1h 54m",
+      "Genre": "Action, Comedy"
+    },
+    {
+      "movie": "Inside",
+      "Rating":"R",
+      "Length":"1h 45m",
+      "Genre": "Drama, Thriller"
+    },
+    {
+      "movie": "Pacific Rim",
+      "Rating":"PG-13",
+      "Length":"1h 45m",
+      "Genre": "Action, Adventure"
+    },
+    {
+      "movie": "Pacific Rim: Uprising",
+      "Rating":"PG-13",
+      "Length":"1h 51m",
+      "Genre": "Action, Adventure"
+    }
+  ]
+}

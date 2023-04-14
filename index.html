@@ -1,17 +1,351 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Kaiju Movies</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
-  </head>
-  <body>
-    <div class="overlay">
-      <div class="content">
-        <h1>Kaiju Movies</h1>
-        <p>Watch the time away with your favorite Kaiju movies!</p>
-        <button onclick="location.href='/Kaiju-Movies/movies.html'">Begin Watching!</button>
-        </div>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpaceFlix | Profiles</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Montserrat:wght@600&family=Noto+Sans:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    .popup {
+      display: none;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1c1c1c;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+
+    .profiles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .profile {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px;
+    }
+
+    .profile img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10%;
+      object-fit: cover;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .profile img:hover {
+      transform: scale(1.2);
+      transition: all 0.5s;
+    }
+
+    .profile p {
+      margin-top: 10px;
+    }
+
+    #add-profile {
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: #00b4db;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #add-profile:hover {
+      background-color: #0083b0;
+    }
+
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 15px;
+      width: 100px;
+      height: auto;
+      z-index: 10;
+      transition: all 0.4s ease-in-out;
+    }
+
+    .logo:hover {
+      transform: scale(1.2);
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .popup--container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .popup {
+      max-width: 400px;
+      padding: 20px;
+      background-color: #222;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .popup::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+      opacity: 0.8;
+      z-index: -1;
+    }
+
+    .popup h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .popup a {
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+
+    .decline {
+      background-color: #ff2e63;
+      color: #fff;
+    }
+
+    .accept {
+      background-color: #00c6ff;
+      color: #fff;
+    }
+
+    .popupShown {
+      display: block;
+    }
+
+    .popupContainer {
+      display: none;
+      max-width: 700px;
+      padding: 100px;
+      background-color: #222;
+      border-radius: 10px;
+      text-align: center;
+      position: fixed;
+      width: 450px;
+      top: 20%;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .popupContainer:before {
+      padding: 75px;
+    }
+
+    .popupContainer input {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: 275px;
+transition: 0.4 ease-in-out;
+    }
+.popupContainer input:focus {
+width: 325px;
+      }
+    .popup--container button {
+      transition-duration: 1s;
+    }
+
+    .popupContainer button:hover {
+      background: grey;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background: none;
+      text-align: center;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="popup--container">
+    <div class="popup">
+      <h2>Do you accept the terms and conditions?</h2>
+      <a href="terms.html">View Terms and Conditions</a>
+      <div class="buttons">
+        <button class="decline">Decline</button>
+        <button class="accept">Accept</button>
       </div>
     </div>
-  </body>
+  </div>
+  <img src="images/logo.png" alt="Logo" class="logo">
+  <header>
+    <h1>Who's watching?</h1>
+  </header>
+  <section class="profiles">
+
+  </section>
+
+
+  <center>
+    <button id="add-profile" onclick="showPopup()">Add Profile</button>
+  </center>
+  <script>
+    if (!localStorage.title) document.title = "SpaceFlix | Profiles";
+    if (localStorage.title) document.title = localStorage.title;
+    function stop(n) {
+      return document.getElementById(n).style.display = "none";
+    }
+    let profiles = [];
+
+    const storedProfiles = localStorage.getItem('profiles');
+    if (storedProfiles) {
+      profiles = JSON.parse(storedProfiles);
+    } else {
+       profiles = [
+        {
+          name: "Default Profile",
+          imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
+        },
+      ];
+    }
+
+    const profileContainer = document.querySelector(".profiles");
+    const addProfileButton = document.getElementById("add-profile");
+
+    function saveProfiles() {
+      localStorage.setItem('profiles', JSON.stringify(profiles));
+    }
+    function displayProfiles() {
+      profileContainer.innerHTML = "";
+      var profileContainers = profiles.forEach((profile) => {
+        const profileDiv = document.createElement("div");
+        profileDiv.classList.add("profile");
+
+        const profileLink = document.createElement("a");
+        profileLink.href = "movies.html";
+        const profileImage = document.createElement("img");
+       profileImage.src = localStorage.imgURL;
+        profileImage.alt = profiles.name;
+profileImage.onerror = function(){
+  profileImage.src = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+}
+        const profileName = document.createElement("p");
+        profileName.textContent = localStorage.getItem("username")
+        localStorage.setItem("username", profile.name);
+        localStorage.setItem("imgURL", localStorage.newImgUrl ? localStorage.newImgUrl : profile.imageUrl);
+        localStorage.getItem("imgURL")
+        profileLink.appendChild(profileImage);
+        profileDiv.appendChild(profileLink);
+        profileDiv.appendChild(profileName)
+        profileContainer.appendChild(profileDiv);
+      });
+    }
+    localStorage.setItem("profileContainers", displayProfiles());
+    var allProfiles = profiles;
+    localStorage.setItem("allProfiles", allProfiles);
+    function showPopup() {
+      document.getElementById('popupContainer').style.display = "block";
+    }
+    function addProfile() {
+      profileImage.src = "";
+      const name = document.getElementById("nameForProfile").value;
+      const imageUrl = document.getElementById("imageForProfile").value;
+
+
+      profiles.push({name, imageUrl});
+      displayProfiles();
+      saveProfiles();
+
+    }
+    displayProfiles();
+  </script>
+  <script>
+    window.addEventListener('load', () => {
+      localStorage.getItem("imgURL");
+    });
+  </script>
+  <div id="popupContainer" class="popupContainer">
+    <center>
+
+      <input id="nameForProfile" placeholder="Enter Name Here">
+      <br>
+      <br>
+      <input id="imageForProfile" placeholder="Enter A image for the profile">
+      <br>
+      <br>
+      <button onclick="stop('popupContainer') && addProfile();
+">Save Profile</button>
+    </center>
+  </div>
+  <footer>
+    <a href="terms.html">Terms Of Service</a>
+  </footer>
+</body>
+
 </html>
