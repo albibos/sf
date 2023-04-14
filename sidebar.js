@@ -27,12 +27,12 @@ sidebarButton.addEventListener('click', () => {
 function signOut() {
   localStorage.username = null;
   localStorage.imgURL = null;
-  location = "/";
+  location = "index.html";
 }
 function show(n) {
   return n.style.display = "block";
 }
 if (!localStorage.getItem("username")) {
   alert("You're not signed in, going to sign in...");
-  location = "/";
+  location = "index.html";
 }
