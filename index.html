@@ -199,11 +199,8 @@
       border: none;
       border-radius: 10px;
       width: 275px;
-transition: 0.4 ease-in-out;
     }
-.popupContainer input:focus {
-width: 325px;
-      }
+
     .popup--container button {
       transition-duration: 1s;
     }
@@ -298,7 +295,7 @@ profileImage.onerror = function(){
         const profileName = document.createElement("p");
         profileName.textContent = localStorage.getItem("username")
         localStorage.setItem("username", profile.name);
-        localStorage.setItem("imgURL", localStorage.newImgUrl ? localStorage.newImgUrl : profile.imageUrl);
+        localStorage.setItem("imgURL", profile.imageUrl);
         localStorage.getItem("imgURL")
         profileLink.appendChild(profileImage);
         profileDiv.appendChild(profileLink);

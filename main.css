@@ -362,3 +362,30 @@ p {
       overflow: hidden;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     }
+.tv-container {
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 20px;
+  margin: 20px;
+  background-color: transparent;
+  display: grid;
+}
+.show {
+   height: 450px;
+  width: calc(90%);
+  position: relative;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  background-color: #333;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.show img {
+   width: 100%;
+  height: 105%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
