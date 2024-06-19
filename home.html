@@ -1,0 +1,210 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<style>
+  
+  input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+
+    display: grid;
+    place-content: center;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: CanvasText;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+
+  * {
+    font-family: "Noto sans", sans-serif;
+  }
+
+  .info {
+    padding: 25px;
+    border-radius: 5px;
+    background-color: #383838;
+    width: 35%;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+  }
+
+  .info h1 {
+    font-size: 19px;
+  }
+
+  body {
+    background-image: url(https://preview.redd.it/how-can-someone-make-this-background-with-html-and-css-i-v0-zjgs096khv591.jpg?width=640&crop=smart&auto=webp&s=68db8dc7dabf2d4467bbae5d5c62992075b6cd80);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 45px;
+
+  }
+
+  p {
+    color: white;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: none;
+    text-align: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .signInButton {
+    position: fixed;
+    top: 3%;
+    left: 85%;
+    display: block;
+    width: 10%;
+    padding: 20px;
+    background-color: darkred;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .signInButton:hover {
+    background-color: indianred;
+  }
+
+  label {
+    user-select: all;
+    color: #fff;
+  }
+
+  #emailName,
+  #passwordName {
+    width: 485px;
+    padding: 0.5rem;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #emailName:focus,
+  #passwordName:focus {
+    gap: 100px;
+    outline: none;
+    width: 485px;
+    padding: 0.5rem;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 4px;
+    color: #eee;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .smallHR {
+    width: 25px;
+  }
+
+  button {
+    color: #E4E4E4;
+    background-color: indianred;
+    transition: ease-in-out 0.4s;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: repeating-linear-gradient(to right, #FF5733, #E72D08, #F3350F);
+    transform: rotate(10deg)
+  }
+</style>
+<br>
+<center>
+  <br>
+  <div class="info">
+    <h1>
+      Movies, TV Shows, and best of all, it's all free.
+    </h1>
+
+    <h1>
+      SpaceFlix, the area for the movies you love.
+    </h1>
+    <p>
+      SpaceFlix is a free platform for everyone to use. If you wish to use our service, sign up or sign in with the
+      button
+      below!
+    </p>
+    <p>
+      Get started!<br>
+      <hr class="smallHR">
+      <input type="text" id="emailName" placeholder="Enter Email to continue"><br><br><input
+        placeholder="Enter Password" type="password" id="passwordName">
+    </p>
+    <br>
+    <button onclick="location='index.html'">Create Account</button>
+  </div>
+  <button class="signInButton" onclick="location='signin.html'">
+    Sign in
+
+  </button>
+  <footer>
+    <a href="terms.html">Terms of service</a>
+  </footer>
+  <script>
+  </script>
+</center>

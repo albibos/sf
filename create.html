@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cabin:wght@500&family=Montserrat:wght@600&family=Noto+Sans:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <style>
+    * {
+      font-family: "Noto sans", sans-serif;
+    }
+    .startLogin {
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 10px rgb(0, 0, 0, 9%);
+      background-color: #1c1c1c;
+    }
+
+    .startLogin h1 {
+      position: relative;
+      color: white;
+      font-size: 35px;
+      width: 100%;
+      font-weight: 1px;
+      font-family: 'Noto sans', sans-serif;
+    }
+
+    body {
+      background-color: #1c1c1c;
+      font-family: "Noto sans", sans-serif;
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: #333;
+      border-radius: 7.5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      max-width: 500px;
+      padding: 20px;
+      height: 535px;
+    }
+
+    .container a {
+      text-decoration: none;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+
+    .container a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin: 0 0 20px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      margin: 0 0 20px;
+      padding: 10px;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: #4caf50;
+      border: none;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover,
+    input[type="submit"]:focus {
+      background-color: #3e8e41;
+      outline: none;
+    }
+
+    .container p {
+      color: #ccc;
+      font-size: 18px;
+      font-family: 'Noto Sans', sans-serif;
+    }
+
+    .containerSelectButton {
+      display: block;
+      width: 83%;
+      padding: 10px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: 'Noto sans', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .containerSelectButton:hover {
+      opacity: 0.5;
+    }
+
+    label[for="email/username"],
+    label[for="password"] {
+      grid-gap: 20px;
+      gap: 100px;
+      color: #ccc;
+      font-family: "Noto sans", sans-serif;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    #invalid {
+      display: none;
+      justify-self: left;
+      font-family: "Noto sans", sans-serif;
+      color: #FF361B;
+      font-size: inherit;
+      font-weight: 100px;
+      overflow: hidden;
+    }
+
+    input[type="checkbox"] {
+      padding: 15px;
+      border-radius: 10px;
+
+    }
+
+    .bonbainer {
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      font-size: 22px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .bonbainer input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 25px;
+      width: 25px;
+      background-color: #eee;
+    }
+
+    .bonbainer:hover input~.checkmark {
+      background-color: #ccc;
+    }
+
+    .bonbainer input:checked~.checkmark {
+      background-color: #2196F3;
+    }
+
+    .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+
+    .bonbainer input:checked~.checkmark:after {
+      display: block;
+    }
+
+    .bonbainer .checkmark:after {
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  </style>
+  <div>
+    <div class="startLogin">
+      <h1>
+        Login
+      </h1>
+    </div>
+    <div class="container">
+      <center>
+      <p>Enter Credentials to continue with SpaceFlix ©</p>
+      </center>
+      <br>
+      <p>
+        Email:
+        <br>
+        <input id="email/username" type="text" placeholder="Email goes here.">
+      <p>
+        Password:
+        <input id="password" maxlength="8" placeholder="Password goes here." type="password">
+      </p>
+      <p id="invalid"><i class="fas fa-exclamation-triangle"></i> The email is invalid. Only use letters and numbers
+        ranking from, "a-z, A-Z, 0-9, @, ."</p>
+      </p>
+      <center>
+        <label id="signIn" class="containerSelectButton">Create Account</label>
+      </center>
+      <hr>
+      
+      <script>
+        const regexFilter = new RegExp(/a-z, A-Z, [@], 0-9/);
+        const email = document.getElementById("email/username").value;
+        const password = document.getElementById("password").value;
+        document.getElementById('signIn').onclick = function () {
+
+          if (document.getElementById("password").value.length == 8 && document.getElementById("email/username").value.includes("@") && regexFilter.test(document.getElementById("password").value) && regexFilter.test(document.getElementById("email/username").value)) {
+            localStorage.setItem("email", document.getElementById("email/username").value);
+            localStorage.setItem("password", document.getElementById("password").value);
+            document.cookie = password;
+            document.cookie = email;
+            location = "index.html"
+          }
+          
+  
+          else if (!regexFilter.test(document.getElementById("password").value) && !regexFilter.test(document.getElementById('email/username').value)) {
+            document.getElementById('invalid').style.display = "block";
+            document.getElementById("invalid").innerHTML = `<i class="fas fa-exclamation-triangle"></i> The email is invalid. Only use letters and numbers ranking from, "a-z, A-Z, 0-9, @, .", your password is incorrect, make sure it is 8 letters.`;
+          }
+        }
+      </script>
+</head>

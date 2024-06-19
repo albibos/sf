@@ -190,15 +190,15 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
     }
 
-    .popupContainer:before {
-      padding: 75px;
-    }
 
     .popupContainer input {
+      color: white;
       padding: 10px;
       border: none;
-      border-radius: 10px;
-      width: 275px;
+      background: #444;
+      
+      border-radius: 5px;
+      width:275px;
     }
 
     .popup--container button {
@@ -226,6 +226,8 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    
   </style>
 </head>
 
@@ -264,7 +266,7 @@
     if (storedProfiles) {
       profiles = JSON.parse(storedProfiles);
     } else {
-       profiles = [
+      profiles = [
         {
           name: "Default Profile",
           imageUrl: "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png",
@@ -287,16 +289,15 @@
         const profileLink = document.createElement("a");
         profileLink.href = "movies.html";
         const profileImage = document.createElement("img");
-       profileImage.src = localStorage.imgURL;
-        profileImage.alt = profiles.name;
-profileImage.onerror = function(){
-  profileImage.src = "https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-}
+        profileImage.src = localStorage.imgURL;
+        profileImage.alt = localStorage.username;
+  
         const profileName = document.createElement("p");
         profileName.textContent = localStorage.getItem("username")
         localStorage.setItem("username", profile.name);
         localStorage.setItem("imgURL", profile.imageUrl);
-        localStorage.getItem("imgURL")
+        localStorage.getItem("imgURL");
+        localStorage.getItem("username");
         profileLink.appendChild(profileImage);
         profileDiv.appendChild(profileLink);
         profileDiv.appendChild(profileName)
@@ -310,17 +311,19 @@ profileImage.onerror = function(){
       document.getElementById('popupContainer').style.display = "block";
     }
     function addProfile() {
-      profileImage.src = "";
+    
       const name = document.getElementById("nameForProfile").value;
       const imageUrl = document.getElementById("imageForProfile").value;
 
 
-      profiles.push({name, imageUrl});
+      profiles.push({name: name, imageUrl: imageUrl});
       displayProfiles();
       saveProfiles();
-
+location.reload();
     }
-    displayProfiles();
+  displayProfiles();
+     localStorage.getItem("imgURL");
+        localStorage.getItem("username");
   </script>
   <script>
     window.addEventListener('load', () => {

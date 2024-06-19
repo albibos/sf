@@ -2,96 +2,112 @@
   "movies": [
     {
       "movie": "Godzilla vs. Kong",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG-13",
       "Length": "1h 53m",
       "Genre": "Sci-Fi, Action"
     },
     {
       "movie": "Super Mario Bros",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 32m",
       "Genre": "Adventure"
     },
     {
       "movie": "Shazam!",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG-13",
       "Length": "2h 12m",
       "Genre": "Action, Comedy"
     },
     {
       "movie": "Unseen",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "NR",
       "Length": "1h 16m",
       "Genre": "Horror, Mystery"
     },
     {
       "movie": "Bee Movie",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 31m",
       "Genre": "Family, Comedy"
     },
     {
       "movie": "Creed III",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG-13",
       "Length": "1h 56m",
       "Genre": "Drama, Action"
     },
     {
       "movie": "Broken Ties",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "R",
       "Length": "1h 28m",
       "Genre": "Thriller"
     },
     {
       "movie": "Portable Door",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 56m",
       "Genre": "Fantasy, Comedy"
     },
     {
       "movie": "John Wick 4",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "R",
       "Length": "2h 50m",
       "Genre": "Action, Thriller"
     },
     {
       "movie": "Minions",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 31m",
       "Genre": "Family, Comedy"
     },
     {
       "movie": "Despicable Me 2",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 38m",
       "Genre": "Family, Comedy"
     },
     {
       "movie": "Despicable Me 3",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 36m",
       "Genre": "Family, Comedy"
     },
     {
       "movie": "Megamind",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG",
       "Length": "1h 36m",
       "Genre": "Family, Comedy"
     },
     {
       "movie": "A Lot of Nothing",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "NR",
       "Length": "1h 34m",
       "Genre": "Drama, Thriller"
     },
     {
       "movie": "Southern Gospel",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "PG-13",
       "Length": "1h 49m",
       "Genre": "History, Drama"
     },
     {
       "movie": "Matrix Resurrection",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BZmYzMzU4NjctNDI0Mi00MGExLWI3ZDQtYzQzYThmYzc2ZmNjXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg",
       "Rating": "R",
       "Length": "2h 27m",
       "Genre": "Action"
